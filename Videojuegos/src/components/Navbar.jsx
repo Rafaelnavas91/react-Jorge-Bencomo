@@ -6,11 +6,11 @@ export const Navbar = () =>{
     return(<header><nav>
         <div className="RIT">RIT</div>    
 
-    <ul>
-        <li><a href="">Juegos</a></li>
-        <li><a href="">Consolas</a></li>
-        <li><a href="">Servicios</a></li>
-        <li><a href="">Contacto</a></li>
+    <ul > 
+        <li><a href="category/superheroes">Spiderman</a></li>
+        <li><a href="category/deportes">FIFA</a></li>
+        <li><a href="category/ficcion">GOD OF WAR</a></li>
+        <li><a href="category/deportes">NBA</a></li>
         <div className="carro"><Cartwidget/></div>
     </ul>
       

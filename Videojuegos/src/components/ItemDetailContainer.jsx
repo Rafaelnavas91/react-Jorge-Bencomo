@@ -1,14 +1,14 @@
-
 import { useParams } from "react-router-dom";
 import{useEffect, useState}from "react";
 import Container from 'react-bootstrap/Container';
 import "./Navbar.css"
 import{game}from "../data/productos"
-import{ItemList} from "../components/itemList"
+import{ItemList} from "./itemList"
+import{ItemDetail} from "./ItemDetail"
 
 
-export const ItemListContainer  =  (props) =>{
-const[items, setItems]=useState([])
+export const ItemDetailContainer  =  (props) =>{
+const[item, setItem]=useState(null)
 
 const {id}=useParams();
 
@@ -19,22 +19,16 @@ const mypromise = new Promise((resolve, reject) => {
 })
 
 mypromise.then((response)=>{
-  if(!id){
-  
-  setItems(response);
-} else{
-  const filterByCategory = response.filter((item)=>item.category===id)
-  setItems(filterByCategory);
-}
+ 
+  const filterById = response.find((item)=>item.id===Number(id))
+  setItems(filterById);
+
 });
 },[id]);
 
-console.log(items);
+
     return( 
-      <Container className='Bienvenido'>
-      <h1>{props.greeting}</h1> 
-    
-      <ItemList items={items}/>
+      <Container className='mt-4'> {item ?<ItemDetail item={item}/> : <>Cargando...</>}
       </Container>
   ); 
    

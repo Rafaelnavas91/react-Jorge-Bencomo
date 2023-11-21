@@ -26,3 +26,11 @@ ul,li{list-style: none;
 
     margin-right: 10px;
     }
+
+    .Bienvenido{
+        display: flex;
+        flex-direction: row;
+    
+        justify-content: center;
+    }
+
