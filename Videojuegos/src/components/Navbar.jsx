@@ -1,20 +1,23 @@
-
-import "./Navbar.css"
+import { NavLink } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 import{Cartwidget} from "./Cartwidget";
 
-export const Navbar = () =>{
-    return(<header><nav>
-        <div className="RIT">RIT</div>    
 
-    <ul > 
-        <li><a href="category/superheroes">Spiderman</a></li>
-        <li><a href="category/deportes">FIFA</a></li>
-        <li><a href="category/ficcion">GOD OF WAR</a></li>
-        <li><a href="category/deportes">NBA</a></li>
-        <div className="carro"><Cartwidget/></div>
-    </ul>
-      
-    </nav>
 
-    </header>)
+export const NavBar = () =>{
+    return( <Navbar  bg="dark" data-bs-theme="dark">
+    <Container >
+      <Navbar.Brand style={{fontSize:"40px", color:"bisque"} }  href="#home">RIT</Navbar.Brand>
+      <Nav style={{ gap:"280px"} }  >
+      <NavLink style={{ color:"bisque"} }  to="/">HOME</NavLink>
+        <NavLink  style={{ color:"bisque"} } to="category/ficcion">MITOLOGIA</NavLink>
+        <NavLink  style={{ color:"bisque"} } to="category/deportes">DEPORTES</NavLink>
+
+        <NavLink  style={{ color:"bisque"} } to="category/superheroes">SUPERHEROES</NavLink>
+      </Nav>
+    </Container>
+    <Cartwidget/>
+  </Navbar>)
 }

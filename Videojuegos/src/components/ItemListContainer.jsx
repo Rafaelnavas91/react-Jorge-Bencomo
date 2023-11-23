@@ -2,9 +2,9 @@
 import { useParams } from "react-router-dom";
 import{useEffect, useState}from "react";
 import Container from 'react-bootstrap/Container';
-import "./Navbar.css"
+
 import{game}from "../data/productos"
-import{ItemList} from "../components/itemList"
+import{ItemList} from "../components/ItemList"
 
 
 export const ItemListContainer  =  (props) =>{

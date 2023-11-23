@@ -1,13 +1,13 @@
 import { useParams } from "react-router-dom";
 import{useEffect, useState}from "react";
 import Container from 'react-bootstrap/Container';
-import "./Navbar.css"
+
 import{game}from "../data/productos"
-import{ItemList} from "./itemList"
+
 import{ItemDetail} from "./ItemDetail"
 
 
-export const ItemDetailContainer  =  (props) =>{
+export const ItemDetailContainer  =  () =>{
 const[item, setItem]=useState(null)
 
 const {id}=useParams();
@@ -20,8 +20,8 @@ const mypromise = new Promise((resolve, reject) => {
 
 mypromise.then((response)=>{
  
-  const filterById = response.find((item)=>item.id===Number(id))
-  setItems(filterById);
+  const findById = response.find((item)=>item.id===Number(id))
+  setItem(findById);
 
 });
 },[id]);
