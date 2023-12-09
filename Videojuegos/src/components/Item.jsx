@@ -10,7 +10,7 @@ export const Item = ({item})=>{
       <Card.Text style={{ color:"bisque", display:"flex", justifyContent:"center" }}>
        {item.description}
       </Card.Text>
-      <Link style={{color:"bisque", display:"flex", justifyContent:"center" }} to={`/items/${item.id} `}> <Button variant="primary">Vista</Button>
+      <Link style={{color:"bisque", display:"flex", justifyContent:"center" }} to={`/items/${item.id} `}> <Button style={{backgroundColor:"bisque", color:"black"}}  variant="primary">Vista</Button>
       </Link>
     </Card.Body>
   </Card>)

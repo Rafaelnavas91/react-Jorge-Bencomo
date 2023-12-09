@@ -12,7 +12,7 @@ export const NavBar = () =>{
       <Navbar.Brand style={{fontSize:"40px", color:"bisque"} }  href="#home">RIT</Navbar.Brand>
       <Nav style={{ gap:"280px"} }  >
       <NavLink style={{ color:"bisque"} }  to="/">HOME</NavLink>
-        <NavLink  style={{ color:"bisque"} } to="category/ficcion">MITOLOGIA</NavLink>
+        <NavLink  style={{ color:"bisque"} } to="category/mitologia">MITOLOGIA</NavLink>
         <NavLink  style={{ color:"bisque"} } to="category/deportes">DEPORTES</NavLink>
 
         <NavLink  style={{ color:"bisque"} } to="category/superheroes">SUPERHEROES</NavLink>
