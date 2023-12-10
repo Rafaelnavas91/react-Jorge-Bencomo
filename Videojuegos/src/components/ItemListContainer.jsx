@@ -41,10 +41,10 @@ return{id:doc.id, ...doc.data()}
 
 console.log(items);
     return( 
-      <Container className=' Bienvenido'>
+      <Container  className=' Bienvenido'>
       <h1  >{props.greeting} </h1> 
     
-      <ItemList items={items}/>
+      <ItemList  items={items}/>
       </Container>
   ); 
    
